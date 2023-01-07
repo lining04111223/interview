@@ -1,0 +1,71 @@
+//https://mongoosejs.com/docs/api.html#document_Document-save
+
+
+const Student = mongoose.model("Student", studentSchema);
+Jon = new Student(
+
+... ...
+
+);
+
+///save
+Jon.save()
+  .then(() => {
+    console.log("Saved to MongoDB.");
+  })
+  .catch((err) => {
+    console.log("saved Failed.");
+    console.log(err);
+  });
+
+
+//find all
+
+Student.find({}).then(
+data =>{
+  console.log(data);
+})
+
+//find one
+Student.find({name:"Jon"}).then(
+  data =>{
+    console.log(data);
+  })
+
+  // find all documents named john and at least 18
+await MyModel.find({ name: 'john', age: { $gte: 18 } }).exec();
+
+//update
+Student.updateMany
+Student.updateOne({name:"Jon Benson"},{name:"Carl Benson"}).then(
+  meg =>{
+    console.log(meg);
+  })
+
+//findOneAndUpdate
+
+  Document.findOneAndUpdate({ URL: documentId }, { data: data });
+    
+
+//delete
+Document.deleteOne({_id:"documentId" });
+
+
+  //create new user
+//const user1 = new User({
+//  _id: new mongoose.Types.ObjectId(),
+//  name: "Ning Li",
+//  email: "lining04111223@gmail.com",
+//  password: "123",
+//  profilePic: "12234556787654321",
+//});
+
+//user1
+//  .save()
+//  .then(() => {
+//    console.log("Saved to MongoDB.");
+//  })
+//  .catch((err) => {
+//    console.log("saved Failed.");
+//    console.log(err);
+//  });
