@@ -48,7 +48,7 @@ console.log(myStack);
 myStack.push("Google");
 myStack.push("Discord");
 console.log(myStack.peek());
-console.log(myStack);
+//console.log(myStack);
 
-myStack.pop();
-console.log(myStack);
+//myStack.pop();
+//console.log(myStack);
